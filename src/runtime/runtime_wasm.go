@@ -10,17 +10,12 @@ type timeUnit float64 // time in milliseconds, just like Date.now() in JavaScrip
 
 const tickMicros = 1000000
 
-//go:export io_get_stdout
-func io_get_stdout() int32
-
 //go:export resource_write
 func resource_write(id int32, ptr *uint8, len int32) int32
 
 var stdout int32
 
-func init() {
-	stdout = io_get_stdout()
-}
+func init() {}
 
 //go:export _start
 func _start() {
