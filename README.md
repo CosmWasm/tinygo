@@ -4,6 +4,18 @@
 
 TinyGo is a Go compiler intended for use in small places such as microcontrollers, WebAssembly (Wasm), and command-line tools.
 
+## CosmWasm Customization
+
+We have done some modifications for "better" wasm support and compatibility with the CosmWasm runtime.
+To build this, try the following:
+
+```shell
+git checkout cw-0.19.0
+docker build -t cosmwasm/tinygo:0.19.0 -f Dockerfile.wasm .
+```
+
+## Original Docs
+
 It reuses libraries used by the [Go language tools](https://golang.org/pkg/go/) alongside [LLVM](http://llvm.org) to provide an alternative way to compile programs written in the Go programming language.
 
 Here is an example program that blinks the built-in LED when run directly on any supported board with onboard LED:

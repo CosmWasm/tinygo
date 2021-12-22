@@ -1,5 +1,5 @@
-//go:build !cosmwasm
-// +build !cosmwasm
+//go:build cosmwasm
+// +build cosmwasm
 
 package runtime
 
@@ -55,10 +55,11 @@ func reflectValueEqual(x, y reflect.Value) bool {
 		return x.Int() == y.Int()
 	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
 		return x.Uint() == y.Uint()
-	case reflect.Float32, reflect.Float64:
-		return x.Float() == y.Float()
-	case reflect.Complex64, reflect.Complex128:
-		return x.Complex() == y.Complex()
+	// NOTE(cosmwasm): removed as it generates false positive float operations.
+	//case reflect.Float32, reflect.Float64:
+	//	return x.Float() == y.Float()
+	//case reflect.Complex64, reflect.Complex128:
+	//	return x.Complex() == y.Complex()
 	case reflect.String:
 		return x.String() == y.String()
 	case reflect.Chan, reflect.Ptr, reflect.UnsafePointer:
