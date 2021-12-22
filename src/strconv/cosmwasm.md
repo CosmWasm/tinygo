@@ -1,3 +1,0 @@
-# strconv
-
-We override the ``ParseInt`` function specifically the error checking which did an interface comparison. Now that is substituted by string checking. Not optimal... 
