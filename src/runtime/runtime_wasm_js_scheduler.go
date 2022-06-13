@@ -1,5 +1,5 @@
-//go:build wasm && !wasi && !scheduler.none
-// +build wasm,!wasi,!scheduler.none
+//go:build wasm && !wasi && !scheduler.none && !cosmwasm
+// +build wasm,!wasi,!scheduler.none,!cosmwasm
 
 package runtime
 

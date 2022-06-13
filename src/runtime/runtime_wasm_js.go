@@ -1,5 +1,5 @@
-//go:build wasm && !wasi
-// +build wasm,!wasi
+//go:build wasm && !wasi && !cosmwasm
+// +build wasm,!wasi,!cosmwasm
 
 package runtime
 
@@ -49,3 +49,6 @@ func sleepTicks(d timeUnit)
 
 //export runtime.ticks
 func ticks() timeUnit
+
+// putchar is a placeholder.
+func putchar(c byte) {}

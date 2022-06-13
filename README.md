@@ -2,6 +2,14 @@
 
 [![Linux](https://github.com/tinygo-org/tinygo/actions/workflows/linux.yml/badge.svg?branch=dev)](https://github.com/tinygo-org/tinygo/actions/workflows/linux.yml) [![macOS](https://github.com/tinygo-org/tinygo/actions/workflows/build-macos.yml/badge.svg?branch=dev)](https://github.com/tinygo-org/tinygo/actions/workflows/build-macos.yml) [![Windows](https://github.com/tinygo-org/tinygo/actions/workflows/windows.yml/badge.svg?branch=dev)](https://github.com/tinygo-org/tinygo/actions/workflows/windows.yml) [![Docker](https://github.com/tinygo-org/tinygo/actions/workflows/docker.yml/badge.svg?branch=dev)](https://github.com/tinygo-org/tinygo/actions/workflows/docker.yml) [![CircleCI](https://circleci.com/gh/tinygo-org/tinygo/tree/dev.svg?style=svg)](https://circleci.com/gh/tinygo-org/tinygo/tree/dev)
 
+## CosmWasm
+
+We have done some modifications for "better" WASM support and compatibility with the CosmWasm runtime.
+
+Refer to [COSMWASM.md](./COSMWASM.md) for details.
+
+## Original docs
+
 TinyGo is a Go compiler intended for use in small places such as microcontrollers, WebAssembly (Wasm), and command-line tools.
 
 It reuses libraries used by the [Go language tools](https://golang.org/pkg/go/) alongside [LLVM](http://llvm.org) to provide an alternative way to compile programs written in the Go programming language.
