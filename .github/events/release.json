@@ -1,0 +1,6 @@
+{
+  "action": "published",
+  "release": {
+    "tag_name": "refs/tags/cw-0.23.0"
+  }
+}
